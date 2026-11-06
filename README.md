@@ -1,28 +1,35 @@
-# Hablo – Spaans leren
+# Hablo – Spaans (castellano) voor Jerry
 
-Persoonlijke PWA om Spaans te leren vanaf nul, gericht op zakelijk gebruik, sociaal/partner, eten & drinken, sport en tech.
+PWA om Spaans te leren dat je direct gebruikt: op de padelbaan, met Spaanse partners (Prodigy Padel, FEP, distributeurs, clubs) en op reis in Spanje.
 
-## Functies
-- **10 missies** met elk 4 levels (Woorden 1, Woorden 2, Zinnen, Missietest)
-- Oefentypes: meerkeuze (ES→NL / NL→ES), luisteren, zin bouwen met tegels, luisteren & bouwen, typen (met accent-knoppen en tolerantie voor accenten/lidwoorden), paren koppelen
-- Spaanse uitspraak via de spraakengine van je toestel (normaal + 🐢 langzaam)
-- XP, levels, dagdoel, streak, combo's
-- Dagelijkse missies met bonus-XP en prestaties (badges)
-- Slim herhalen: zwakke woorden komen terug in herhaalsessies
-- Voortgang: XP per dag, nauwkeurigheid per dag, sterkte per missie, lastigste woorden
-- Geluidjes (Web Audio), animaties, light/dark mode, werkt offline
-- Export/import van voortgang (alles staat lokaal op je toestel)
+## Inhoud (leervolgorde)
+1. 🎾 Padel op de baan (standaard startdomein)
+2. 📲 Product & data (PadelPlay)
+3. 🤝 Zakelijk & deals
+4. 🏟️ Evenementen & clubs
+5. ✈️ Reizen & sociaal
+6. 🏋️ Sport & fitness (Hyrox)
+7. ✏️ Mijn woorden (zelf toegevoegd)
+
+240 woorden en zinnen. Elk woord heeft een lidwoord, een vertaling, een voorbeeldzin uit jouw context en audio (stem uit Spanje, es-ES).
+
+## Hoe het leert
+- Elk domein is opgedeeld in missies van 8 woorden en 4 zinnen, met 3 levels: **Woorden → Zinnen → Test**.
+- Oefeningen: meerkeuze, luisteren, zin bouwen (ES→NL en NL→ES), typen, paren koppelen.
+- **Spaced repetition** (Leitner, 7 dozen: nu, 1, 2, 4, 8, 16 en 32 dagen). Een fout antwoord zet het woord terug naar het begin, zodat het vaker terugkomt.
+- Instelbaar: niveau (beginner/gevorderd), richting (beide / ES→NL / NL→ES), sessieduur (5 of 10 min), dagdoel.
+- Voortgang per domein, geheugendozen, XP per dag, nauwkeurigheid, lastigste woorden.
+- XP, levels, streak, dagelijkse missies, prestaties, geluidjes en animaties. Werkt offline.
+
+## Woorden toevoegen
+- **In de app:** tab Woorden → ＋. De woorden komen in "Mijn woorden" en in je herhaling.
+- **In de code:** `data.js`. Eén regel per woord:
+  `la pista | de baan | ¿Reservamos una pista para mañana? | Reserveren we morgen een baan?`
+  Verhoog daarna `VERSION` in `sw.js`.
 
 ## Deploy op Vercel
-1. Ga naar vercel.com → **Add New → Project** → importeer deze GitHub-repo.
-2. Framework preset: **Other**. Geen build command, output directory leeg laten.
-3. Deploy. Open de URL op je iPhone in Safari → **Deel → Zet op beginscherm**.
+Importeer de repo op vercel.com en kies als framework **Other** (geen build). Open de site op je iPhone in Safari en kies **Deel → Zet op beginscherm**.
+Tip: installeer op je iPhone de stem "Mónica" (Spaans, Spanje) via Instellingen → Toegankelijkheid → Gesproken materiaal → Stemmen.
 
-## Content aanpassen
-Alle woorden en zinnen staan in `data.js`. Voeg een unit toe of pas de lijsten aan (12 woorden + 8 zinnen per unit).
-Verhoog na een update `VERSION` in `sw.js` zodat de cache ververst.
-
-## Lokaal draaien
-```
-python3 -m http.server 8000
-```
+## Lokaal
+`python3 -m http.server 8000`
